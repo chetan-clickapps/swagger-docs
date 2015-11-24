@@ -95,7 +95,7 @@ describe Swagger::Docs::ApiDeclarationFile do
 
   describe "#swagger_version" do
     it "returns metadata.swagger_version" do
-      metadata = double("metadata", swagger_version: "1.2")
+      metadata = double("metadata", swagger_version: "2.0")
       declaration = described_class.new(metadata, apis, models)
       expect(declaration.swagger_version).to eq(metadata.swagger_version)
     end
