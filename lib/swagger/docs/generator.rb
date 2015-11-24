@@ -61,7 +61,7 @@ module Swagger
         end
 
         def generate_doc(api_version, settings, config)
-          root = { "apiVersion" => api_version, "swaggerVersion" => "1.2", "basePath" => settings[:base_path] + "/", :apis => [] }
+          root = { "apiVersion" => api_version, "swaggerVersion" => "2.0", "basePath" => settings[:base_path] + "/", :apis => [] }
           results = {:processed => [], :skipped => []}
           resources = []
 
