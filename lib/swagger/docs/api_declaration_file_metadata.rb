@@ -1,7 +1,7 @@
 module Swagger
   module Docs
     class ApiDeclarationFileMetadata
-      DEFAULT_SWAGGER_VERSION = "1.2"
+      DEFAULT_SWAGGER_VERSION = "2.0"
 
       attr_reader :api_version, :path, :base_path, :controller_base_path, :swagger_version, :camelize_model_properties
 
