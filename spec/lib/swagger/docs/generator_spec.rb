@@ -70,7 +70,7 @@ describe Swagger::Docs::Generator do
       let(:response) { JSON.parse(resource) }
       let(:first) { response["apis"].first }
       let(:operations) { first["operations"] }
-      # {"apiVersion":"1.0","swaggerVersion":"1.2","basePath":"/api/v1","resourcePath":"/sample"
+      # {"apiVersion":"1.0","swaggerVersion":"2.0","basePath":"/api/v1","resourcePath":"/sample"
       it "writes basePath correctly" do
         expect(response["basePath"]).to eq "http://api.no.where/"
       end
@@ -190,7 +190,7 @@ describe Swagger::Docs::Generator do
           expect(response["apiVersion"]).to eq DEFAULT_VER
         end
         it "writes swaggerVersion correctly" do
-          expect(response["swaggerVersion"]).to eq "1.2"
+          expect(response["swaggerVersion"]).to eq "2.0"
         end
         it "writes basePath correctly" do
           expect(response["basePath"]).to eq "http://api.no.where/api/v1/"
@@ -225,12 +225,12 @@ describe Swagger::Docs::Generator do
         let(:resource) { file_resource.read }
         let(:response) { JSON.parse(resource) }
         let(:apis) { response["apis"] }
-        # {"apiVersion":"1.0","swaggerVersion":"1.2","basePath":"/api/v1","resourcePath":"/sample"
+        # {"apiVersion":"1.0","swaggerVersion":"2.0","basePath":"/api/v1","resourcePath":"/sample"
         it "writes version correctly" do
           expect(response["apiVersion"]).to eq DEFAULT_VER
         end
         it "writes swaggerVersion correctly" do
-          expect(response["swaggerVersion"]).to eq "1.2"
+          expect(response["swaggerVersion"]).to eq "2.0"
         end
         it "writes basePath correctly" do
           expect(response["basePath"]).to eq "http://api.no.where/api/v1/"
