@@ -61,7 +61,7 @@ module Swagger
         end
 
         def generate_doc(api_version, settings, config)
-          root = { "swagger" => "2.0","info" => { "version" => api_version, "title" => "Swagger Petstore", "license" => {"name": "MIT"}} , "host": "petstore.swagger.io", "basePath" => settings[:base_path] + "/", "schemes": "- http", "consumes": "- application/json", "produces":  "- application/json", :apis => [] }
+          root = { "apiVersion": "1.0",  "swaggerVersion": "2.0", "basePath" => settings[:base_path] + "/", :apis => [] }
           results = {:processed => [], :skipped => []}
           resources = []
 
